@@ -205,10 +205,11 @@ section {
     font-size: clamp(2.2rem, 5vw, 2.8rem);
     text-align: center;
     margin-bottom: 3.5rem;
-    background: linear-gradient(135deg, var(--0090f4), var(--45b1ff));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    
+    color: #ffffff; /* 🔥 blanco real */
+    text-shadow: 0 4px 20px rgba(0,0,0,0.4); /* opcional pero se ve mejor */
 }
+
 
 /* CARDS */
 .cards-grid {
@@ -305,6 +306,27 @@ section {
     backdrop-filter: blur(10px);
     min-width: 220px;
     transition: all 0.3s ease;
+}
+.insta-btn {
+    display: inline-block;
+    margin-top: 2.5rem;
+    padding: 1rem 2.8rem;
+    
+    background: linear-gradient(135deg, #ff693c, #da812f, #da9e2f); /* estilo Instagram */
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+/* HOVER 🔥 */
+.insta-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
 /* RESPONSIVE - MEJORADO */
