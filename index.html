@@ -3,329 +3,200 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Guía Blender</title>
+<link rel="stylesheet" href="style.css">
+<title>Guía Didáctica Blender 3D + VR | UET Salesiano</title>
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
-}
-
-body{
-    background: linear-gradient(135deg,#e0f2fe,#fff8f0,#fff7ed);
-    color:#334155;
-    scroll-behavior:smooth;
-    overflow-x:hidden;
-}
-
-/* NAV */
-nav{
-    position:fixed;
-    top:0;
-    width:100%;
-    background:rgba(255,255,255,0.85);
-    backdrop-filter:blur(12px);
-    padding:10px 40px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    z-index:1000;
-}
-
-.logo-area{
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-
-.nav-logo{
-    height:50px;
-    border-radius:8px;
-}
-
-nav h1{
-    color:#ee7c1e;
-    font-weight:800;
-}
-
-nav ul{
-    display:flex;
-    gap:20px;
-    list-style:none;
-}
-
-nav a{
-    text-decoration:none;
-    color:#475569;
-}
-
-nav a:hover{
-    color:#fb923c;
-}
-
-/* HEADER MÁS LLAMATIVO */
-header{
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    position:relative;
-    background: linear-gradient(120deg,#fac9ad,#f7d0b9,#ffedd5);
-    overflow:hidden;
-}
-
-/* burbujas animadas */
-header span{
-    position:absolute;
-    border-radius:50%;
-    background:rgba(255,255,255,0.3);
-    animation:float 8s infinite;
-}
-
-header span:nth-child(1){ width:80px;height:80px; left:10%; top:80%; }
-header span:nth-child(2){ width:50px;height:50px; left:70%; top:90%; }
-header span:nth-child(3){ width:100px;height:100px; left:80%; top:60%; }
-
-@keyframes float{
-    0%{ transform:translateY(0);}
-    100%{ transform:translateY(-600px);}
-}
-
-header h2{
-    font-size:3rem;
-    color:#e45715;
-    z-index:1;
-}
-
-header p{
-    max-width:600px;
-    margin-top:10px;
-    z-index:1;
-}
-
-/* BOTÓN */
-.btn{
-    margin-top:20px;
-    padding:14px 40px;
-    border-radius:30px;
-    background:#fb923c;
-    color:white;
-    font-weight:bold;
-    text-decoration:none;
-    transition:0.3s;
-}
-
-.btn:hover{
-    transform:scale(1.05);
-    background:#f97316;
-}
-
-/* SECCIONES */
-section{ padding:80px 5%; }
-h2{ text-align:center; color:#e04903; margin-bottom:20px; }
-
-/* CARDS */
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:20px;
-}
-
-.card{
-    background:rgb(253,175,130);
-    padding:20px;
-    border-radius:20px;
-    box-shadow:0 10px 20px rgba(0,0,0,0.05);
-}
-
-.card:hover{
-    transform:translateY(-10px);
-}
-
-/* GALERÍA */
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-}
-
-.gallery img{
-    width:100%;
-    height:230px;
-    object-fit:cover;
-    border-radius:20px;
-    transition:0.3s;
-}
-
-.gallery img:hover{
-    transform:scale(1.05);
-}
-
-/* TEAM */
-.team{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-}
-
-.member{
-    background:rgb(248,207,174);
-    padding:20px;
-    border-radius:20px;
-    width:280px;
-    text-align:center;
-}
-
-.member img{
-    width:130px;
-    height:130px;
-    border-radius:50%;
-    object-fit:cover;
-}
-
-/* INSTAGRAM */
-.instagram{
-    text-align:center;
-    padding:30px;
-    background:#ffe4d6;
-    border-radius:20px;
-}
-
-/* REVEAL */
-.reveal{
-    opacity:0;
-    transform:translateY(60px);
-    transition:0.8s;
-}
-
-.reveal.active{
-    opacity:1;
-    transform:translateY(0);
-}
-</style>
 </head>
 
 <body>
+    <!-- NAV -->
+    <nav id="nav">
+        <div class="logo-area">
+            <div class="logo">3D</div>
+            <h1>Blender VR Guide</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#proyecto">Proyecto</a></li>
+            <li><a href="#roblox">Roblox Quiz</a></li>
+            <li><a href="#guia">Guía PDF</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#equipo">Equipo</a></li>
+        </ul>
+    </nav>
 
-<nav>
-<div class="logo-area">
-<img src="logo.jpg" class="nav-logo">
-<h1>Blender Guía Digital</h1>
-</div>
+    <!-- HERO COMPACTO -->
+    <section id="inicio" class="hero">
+        <div class="hero-bg"></div>
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+        <div class="hero-content reveal">
+            <h1>Guía Didáctica<br>Blender 3D + VR</h1>
+            <p><br>Aprendizaje inmersivo con Realidad Virtual</p>
+            <a href="#proyecto" class="cta-button"> Descubrir Proyecto</a>
+        </div>
+    </section>
 
-<ul>
-<li><a href="#inicio">Inicio</a></li>
-<li><a href="#proyecto">Proyecto</a></li>
-<li><a href="#quiz">Quiz Roblox</a></li>
-<li><a href="#guia">Guía Digital</a></li>
-<li><a href="#galeria">Galería</a></li>
-<li><a href="#equipo">Equipo</a></li>
-</ul>
-</nav>
+    <!-- PROYECTO -->
+    <section id="proyecto" class="reveal">
+        <h2 class="section-title"> El Proyecto</h2>
+        <!-- Cards igual que antes... -->
+        <div class="cards-grid">
+            <div class="feature-card glass">
+                <h3 style="color: var(--ed5700); font-size: 1.5rem;"> Objetivo General</h3>
+                <p>Guía educativa práctica en Blender 3D con herramientas VR para mejorar aprendizaje interactivo.</p>
+            </div>
+            <div class="feature-card glass">
+                <h3 style="color: var(--0090f4); font-size: 1.5rem;"> Metodología</h3>
+                <p>Descriptiva-aplicada con pruebas en estudiantes y validación VR.</p>
+            </div>
+            <div class="feature-card glass">
+                <h3 style="color: var(--ff6600); font-size: 1.5rem;"> Hipótesis</h3>
+                <p>VR mejora significativamente comprensión de diseño 3D.</p>
+            </div>
+        </div>
+    </section>
 
-<header id="inicio">
-<span></span><span></span><span></span>
-<h2>Guía Digital Didáctica de Blender</h2>
-<p>Proyecto de tesis con aprendizaje interactivo y visualización en Realidad Virtual</p>
-<a href="#proyecto" class="btn">Ver Proyecto</a>
-</header>
-
-<section id="proyecto" class="reveal">
-<h2>📘 Información del Proyecto</h2>
-
-<p>
-Este proyecto consiste en el desarrollo de una guía digital didáctica para el aprendizaje del software Blender,
-incluyendo prácticas guiadas y visualización en realidad virtual (VR).
-</p>
-
-<div class="cards">
-
-<div class="card">
-<h3>Objetivo General</h3>
-<p>
-Crear una guía educativa que enseñe los fundamentos con su aplicación práctica en Blender 3D, incorporando herramientas de realidad virtual para mejorar el aprendizaje interactivo y las habilidades digitales de cada uno de los estudiantes.
-</p>
-</div>
-
-<div class="card">
-<h3>Objetivos Específicos</h3>
-<ul>
-<li>Describir las funciones y herramientas básicas necesarias</li>
-<li>Implementar elementos de realidad virtual</li>
-<li>Crear modelos tridimensionales básicos</li>
-<li>Fomentar el aprendizaje autónomo</li>
-</ul>
-</div>
-
-</div>
+<!-- ROBLOX - QUIZ INTERACTIVO -->
+<section id="roblox" class="roblox-section reveal">
+    <div class="roblox-container">
+        <h2 class="section-title" style="color: white; margin-bottom: 1.5rem;">
+             Quiz Interactivo Roblox
+        </h2>
+        
+        <div class="quiz-card glass">
+            <div class="quiz-content">
+                <div class="quiz-icon"></div>
+                <h3>¡Pon a prueba tus conocimientos!</h3>
+                <p>Responde el quiz en Realidad Virtual dentro de Roblox y demuestra cuánto aprendiste de Blender 3D.</p>
+                
+                <a href="https://www.roblox.com/es/games/82535210917976/Presentacion" 
+                   target="_blank" 
+                   class="roblox-cta">
+                     Entrar al Quiz VR
+                </a>
+            </div>
+        </div>
+    </div>
 </section>
 
-<section id="quiz" class="reveal">
-<h2>🎮 Quiz Interactivo en Roblox</h2>
-<a href="https://www.roblox.com/es/games/82535210917976/Presentacion" target="_blank" class="btn">
-Entrar al Quiz
-</a>
-</section>
+    <!-- GUÍA -->
+    <section id="guia" class="reveal">
+        <h2 class="section-title"> Guía Didáctica</h2>
+        <div class="pdf-container glass">
+            <iframe src="Tesis Guia didactica-comprimido.pdf" 
+                    style="width:100%; height:70vh; border-radius:20px; border: none;"></iframe>
+        </div>
+    </section>
 
-<section id="guia" class="reveal">
-<h2>📖 Guía Digital</h2>
-<iframe src="Tesis Guia didactica-comprimido.pdf" style="width:100%; height:80vh; border-radius:20px;"></iframe>
-</section>
+    <!-- GALERÍA CON DESCRIPCIONES -->
+    <section id="galeria" class="reveal">
+        <h2 class="section-title"> Galería de Proyectos</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="particulas.png" alt="Partículas 3D">
+                <div class="gallery-desc">
+                    <h4> Efectos Partículas</h4>
+                    <p>Simulación avanzada de partículas en Blender</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="kirby.png" alt="Kirby 3D">
+                <div class="gallery-desc">
+                    <h4> Kirby Modelado</h4>
+                    <p>Personaje completo con texturas y rigging</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="escenario.png" alt="Escenario">
+                <div class="gallery-desc">
+                    <h4> Escenario Completo</h4>
+                    <p>Entorno 3D integrado con iluminación profesional</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="galeria" class="reveal">
-<h2>🖼️ Galería</h2>
-<div class="gallery">
-<img src="particulas.png">
-<img src="kirby.png">
-<img src="escenario.png">
-</div>
-</section>
+    <!-- EQUIPO -->
+    <section id="equipo" class="reveal">
+        <h2 class="section-title"> Equipo Salesiano</h2>
+        <div class="team-grid">
+            <div class="team-member glass">
+                <img src="Daya.jpeg" class="member-photo" alt="Dayanna">
+                <h3>Dayanna Quizhpe</h3>
+                <p>dayanna.quizhpev.est@uets.edu.ec</p>
+            </div>
+            <div class="team-member glass">
+                <img src="Dome.jpeg" class="member-photo" alt="Domenica">
+                <h3>Domenica Paucar</h3>
+                <p>domenica.paucarc.est@uets.edu.ec</p>
+            </div>
+        </div>
+    </section>
 
-<section id="equipo" class="reveal">
-<h2>👩‍💻 Autoras del Proyecto</h2>
+    <!-- INSTAGRAM CREATIVO -->
+    <section class="instagram-section reveal">
+        <div class="instagram-content">
+            <h2> @meta_study.26</h2>
+            <p style="font-size: 1.3rem; margin-bottom: 2rem;">Síguenos para más contenido 3D y VR</p>
+            <div class="instagram-grid">
+                <div class="insta-card">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎥</div>
+                    <h4>Tutoriales Blender</h4>
+                    <p>Guías paso a paso</p>
+                </div>
+                <div class="insta-card">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔥</div>
+                    <h4>Proyectos 3D</h4>
+                    <p>Modelos exclusivos</p>
+                </div>
+                <div class="insta-card">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎮</div>
+                    <h4>Roblox VR</h4>
+                    <p>Contenido interactivo</p>
+                </div>
+            </div>
+            <a href="https://www.instagram.com/meta_study.26/" target="_blank" class="insta-btn">
+                 Seguir en Instagram
+            </a>
+        </div>
+    </section>
 
-<div class="team">
+    <footer>
+        <p>Blender 3D + Realidad Virtual | Proyecto de Tesis</p>
+    </footer>
 
-<div class="member">
-<img src="Daya.jpeg">
-<h3>Dayanna Quizhpe</h3>
-<p>Tercero de Bachillerato<br>Especialidad Informática</p>
-</div>
+    <script>
+        // Navbar scroll
+        window.addEventListener('scroll', () => {
+            document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
+        });
 
-<div class="member">
-<img src="Dome.jpeg">
-<h3>Domenica Paucar</h3>
-<p>Tercero de Bachillerato<br>Especialidad Informática</p>
-</div>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
 
-</div>
-</section>
+        // Reveal animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        });
 
-<section class="instagram reveal">
-<h2>📸 Instagram</h2>
-<a href="https://www.instagram.com/meta_study.26/" target="_blank" class="btn">Ver Instagram</a>
-</section>
-
-<footer style="text-align:center; padding:20px; background:#feece0;">
-<p>© 2026 Proyecto de Tesis Blender</p>
-</footer>
-
-<script>
-window.addEventListener("scroll",()=>{
- document.querySelectorAll(".reveal").forEach(el=>{
-  if(el.getBoundingClientRect().top < window.innerHeight-100){
-   el.classList.add("active");
-  }
- });
-});
-</script>
-
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
